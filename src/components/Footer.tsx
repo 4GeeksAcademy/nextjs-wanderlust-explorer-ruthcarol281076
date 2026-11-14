@@ -23,7 +23,7 @@ export default function Footer() {
             </h3>
             <ul className="flex flex-col gap-2">
               {[
-                { label: "Home", href: "/" },
+                { label: "Inicio", href: "/" },
                 { label: "Experiencias", href: "/experiences" },
                 { label: "Favoritos", href: "/favorites" },
                 { label: "Perfil", href: "/profile" },

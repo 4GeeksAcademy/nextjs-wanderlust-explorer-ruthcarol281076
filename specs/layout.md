@@ -35,6 +35,8 @@ Layout raíz de la aplicación que envuelve todas las páginas con el provider d
 - El `<main>` debe tener un `min-height` suficiente para que el footer (o contenido) no quede pegado al fondo. Sugerencia: `min-h-screen` con padding superior para compensar la altura de la Navbar fija.
 - La Navbar debe ser fija en la parte superior (`fixed top-0`) para que el contenido se desplace debajo de ella.
 - Agregar un padding-top al `<main>` igual a la altura de la Navbar (ej. `pt-16`).
+- Renderizar el `Footer` compartido después del contenido principal en todas las rutas.
+- Las páginas `src/app/not-found.tsx` y `src/app/experiences/[id]/not-found.tsx` presentan, respectivamente, el 404 global y el estado de experiencia no encontrada; ambas usan el shell global.
 
 ## UI/UX
 
@@ -53,11 +55,23 @@ Layout raíz de la aplicación que envuelve todas las páginas con el provider d
 |---|---|
 | `metadata` (export) | Configurar metadatos globales (title, description) para SEO |
 | `layout.tsx` (App Router) | Layout raíz que envuelve todas las páginas con provider y navbar |
+| `not-found.tsx` | Renderizado de estado 404 global mediante el App Router |
 
-## Dependencias
+## Stack técnico y restricciones
 
-- `FavoritesProvider` de `@/context/FavoritesContext`
-- `Navbar` de `@/components/Navbar`
+| Tecnología | Versión / Detalle |
+|---|---|
+| **Framework** | Next.js 16 (App Router) |
+| **Lenguaje** | TypeScript (tipado estricto) |
+| **Estilos** | Tailwind CSS v4 |
+| **Fuentes** | Geist / Geist Mono (Google Fonts vía `next/font`) |
+| **Estado global** | React Context API + `useState` (sin Redux, Zustand ni librerías externas) |
+| **Routing** | App Router (`layout.tsx` raíz) |
+| **SEO** | `export const metadata` con title template (`"%s — Wanderlust Explorer"`) |
+| **Accesibilidad** | Skip-to-content link, `id="main-content"`, `tabIndex={-1}` en `<main>` |
+| **Animaciones** | CSS `@keyframes` (fade-in) + Tailwind `animate-*` |
+| **Componentes** | `FavoritesProvider` (cliente) + `Navbar` (cliente) + `Footer` (server) |
+| **Condiciones** | Sin persistencia de datos, sin API externa, sin autenticación, sin base de datos |
 
 ## Criterios de aceptación
 

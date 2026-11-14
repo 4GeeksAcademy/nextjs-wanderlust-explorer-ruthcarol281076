@@ -1,17 +1,24 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import { useFavorites } from "@/context/FavoritesContext";
 import { experiences } from "@/data/experiences";
 import ExperienceCard from "@/components/ExperienceCard";
+import BackToTop from "@/components/BackToTop";
 
 export default function FavoritesPage() {
+  useEffect(() => {
+    document.title = "Mis Favoritos — Wanderlust Explorer";
+  }, []);
   const { favorites } = useFavorites();
   const favoriteExperiences = experiences.filter((exp) =>
     favorites.includes(exp.id)
   );
 
   return (
+    <>
+    <BackToTop />
     <div className="max-w-7xl mx-auto px-4 md:px-8 py-8">
       {/* Page title */}
       <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -32,7 +39,7 @@ export default function FavoritesPage() {
           </div>
         </>
       ) : (
-        <div className="flex flex-col items-center justify-center min-h-[60vh] text-center gap-4">
+        <div className="flex flex-col items-center justify-center min-h-[60vh] text-center gap-4" role="status">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="w-20 h-20 text-gray-300"
@@ -40,6 +47,7 @@ export default function FavoritesPage() {
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth={1}
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -77,5 +85,6 @@ export default function FavoritesPage() {
         </div>
       )}
     </div>
+    </>
   );
 }

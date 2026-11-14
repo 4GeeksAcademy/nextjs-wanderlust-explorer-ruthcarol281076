@@ -42,10 +42,21 @@ Página estática de perfil de usuario simulado que muestra información persona
 |---|---|
 | `page.tsx` (App Router) | Página estática renderizada en la ruta `/profile` |
 
-## Dependencias
+## Stack técnico y restricciones
 
-- `useFavorites` hook
-- Opcional: `ExperienceCard` si se muestran últimas favoritas
+| Tecnología | Versión / Detalle |
+|---|---|
+| **Framework** | Next.js 16 (App Router) |
+| **Lenguaje** | TypeScript (tipado estricto) |
+| **Estilos** | Tailwind CSS v4 |
+| **Fuentes** | Geist / Geist Mono (Google Fonts vía `next/font`) |
+| **Estado global** | React Context API + `useState` (sin Redux, Zustand ni librerías externas) |
+| **Routing** | App Router (`page.tsx`, client component) |
+| **SEO** | `document.title` vía `useEffect` (client component) |
+| **Accesibilidad** | Roles ARIA, `aria-label` en avatar y contador, `role="img"` |
+| **Animaciones** | CSS `@keyframes` (fade-in-up) + Tailwind `animate-*` |
+| **Datos** | Perfil simulado estático + contador de favoritos desde contexto |
+| **Condiciones** | Sin persistencia de datos, sin API externa, sin autenticación, sin base de datos |
 
 ## Criterios de aceptación
 

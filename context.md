@@ -2,7 +2,7 @@
 
 ## 1. Resumen
 
-Wanderlust Explorer es un MVP de una aplicación web para descubrir experiencias de viaje. Los usuarios pueden explorar un catálogo, buscar y filtrar experiencias mediante parámetros compartibles en la URL, consultar sus detalles y guardar favoritos durante la sesión.
+Wanderlust Explorer es un MVP en español para descubrir experiencias de viaje. Los usuarios pueden explorar un catálogo local, buscar y filtrar mediante parámetros compartibles en la URL, consultar detalles, guardar favoritos en estado de sesión y revisar un perfil simulado.
 
 ## 2. Objetivos
 
@@ -30,6 +30,8 @@ Personas que buscan actividades y experiencias de viaje y quieren encontrar, con
 
 La navegación principal debe estar disponible en todas las páginas.
 
+Las interfaces de carga y no encontrado son parte de las rutas: `SkeletonCard` para el explorador, `DetailSkeleton` para detalles, `ExperienceNotFound` para IDs inválidos/inexistentes y `src/app/not-found.tsx` para el 404 global.
+
 ### 4.2 Explorador, búsqueda y filtros
 
 - Mostrar las experiencias en una cuadrícula responsiva.
@@ -48,6 +50,7 @@ La navegación principal debe estar disponible en todas las páginas.
 - El corazón debe indicar claramente el estado activo o inactivo.
 - Los IDs favoritos deben mantenerse en estado React compartido y estar disponibles en el explorador, las tarjetas, Favoritos y Perfil.
 - No se requiere persistencia: los favoritos pueden perderse al recargar la aplicación.
+- El control flotante compartido `BackToTop` se incluye en `/experiences` y `/favorites`; permanece siempre visible, fijo al viewport y desplaza suavemente al inicio. Su especificación independiente está en `specs/back-to-top.md`.
 
 ### 4.4 Perfil
 
@@ -78,6 +81,7 @@ Componentes requeridos como mínimo:
 - `ExperienceCard`
 - `SearchBar`
 - `FilterBar`
+- `HeroSection`, `Footer`, `FavoriteButton`, `SkeletonCard` y `BackToTop` como piezas compartidas o de presentación.
 
 También se debe crear al menos un custom hook, por ejemplo, `useExperiences` o `useFilters`, para encapsular la lógica de filtrado.
 
@@ -86,7 +90,7 @@ La aplicación debe utilizar `useEffect` en al menos un componente, por ejemplo,
 ## 7. Requisitos técnicos
 
 - Next.js con React, TypeScript y App Router.
-- Configuración inicial prevista mediante `create-next-app`, con Tailwind CSS, ESLint, directorio `src` y alias `@/*`.
+- Stack implementado: Next.js 16, React 19, TypeScript, Tailwind CSS v4 y ESLint, con directorio `src` y alias `@/*`.
 - No usar librerías externas de gestión de estado.
 - Gestionar favoritos con `useState` y compartirlos mediante props o un contexto React.
 - Usar `useSearchParams` y `usePathname` para leer los parámetros de búsqueda y detectar la ruta activa.
@@ -127,8 +131,27 @@ Registrar en el README los enlaces y una breve nota sobre los elementos relevant
 - No se permite Redux, Zustand u otra librería externa de estado.
 - La búsqueda debe cumplir el requisito de comparación mediante regex case-insensitive. Para tratar el término ingresado como texto literal, se recomienda escapar los caracteres especiales antes de construir la expresión regular.
 - Para compartir favoritos entre rutas del App Router, se necesita estado compartido de React situado en un nivel común de la aplicación, por ejemplo, un provider cliente en el layout raíz.
+- Para mantener `BackToTop` realmente fijo al viewport, el componente se monta con `createPortal` en `document.body`; no debe ser descendiente visual de contenedores que puedan crear un containing block para `position: fixed` (por ejemplo, con `transform`, `filter`, `perspective`, `contain` o `will-change`). El icono se centra sin `display: flex` en el botón.
+- La transición de aparición del `<main>` es solo por opacidad; evita usar `transform` en un ancestro del control flotante.
 
-## 11. Fuera de alcance
+## 11. Especificaciones funcionales
+
+Las especificaciones y sus criterios de aceptación están en `specs/`:
+
+| Documento | Alcance |
+|---|---|
+| `specs/home.md` | Home y `HeroSection`. |
+| `specs/explorer.md` | Explorador, búsqueda, filtros, hook, tarjetas, skeleton y uso de BackToTop. |
+| `specs/experience-detail.md` | Detalle, botón de favoritos, skeleton y not-found de experiencia. |
+| `specs/favorites-context.md` | Estado compartido de favoritos. |
+| `specs/favorites-page.md` | Página de favoritos y BackToTop compartido. |
+| `specs/profile.md` | Perfil simulado. |
+| `specs/layout.md` | Shell global, Navbar, Footer y 404 global. |
+| `specs/navbar.md` | Navegación principal. |
+| `specs/back-to-top.md` | Componente BackToTop, independiente y de uso compartido. |
+| `specs/template.md` | Plantilla base de especificaciones. |
+
+## 12. Fuera de alcance
 
 - Registro, inicio de sesión o autenticación real.
 - Guardado persistente de favoritos.
@@ -136,8 +159,7 @@ Registrar en el README los enlaces y una breve nota sobre los elementos relevant
 - Compra o reserva de experiencias.
 - Gestión administrativa del catálogo.
 
-## 12. Configuración externa pendiente
+## 13. Configuración externa y publicación
 
-- Crear el proyecto con el comando de `create-next-app` especificado en el requerimiento.
-- Crear el repositorio público `nextjs-wanderlust-explorer`.
-- Configurar el remoto de GitHub y publicar la rama `main`.
+- No hay variables de entorno, API, base de datos ni autenticación requeridas en la implementación actual.
+- La URL de demo pública, licencia y canal de contacto no están definidos en el repositorio; consultar `README.md` antes de publicar o reutilizar el proyecto.

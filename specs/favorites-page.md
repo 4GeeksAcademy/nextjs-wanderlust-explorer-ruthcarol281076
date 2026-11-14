@@ -19,6 +19,7 @@ Página que muestra todas las experiencias que el usuario ha marcado como favori
 - Leer la lista de IDs favoritos desde `useFavorites()`.
 - Filtrar el dataset completo para obtener solo las experiencias cuyos IDs estén en la lista de favoritos.
 - Mostrar grid de `ExperienceCard` para cada experiencia favorita.
+- Incluir `BackToTop` como control flotante compartido, independiente del contenido y del footer; ver `specs/back-to-top.md`.
 - Cada tarjeta debe mostrar el corazón ya marcado como activo.
 - Si el usuario desmarca una experiencia desde esta página, debe desaparecer de la lista.
 - Si no hay favoritos, mostrar mensaje: "Aún no tienes favoritos. ¡Explora y añade algunos!" con un enlace al explorador.
@@ -43,9 +44,27 @@ Página que muestra todas las experiencias que el usuario ha marcado como favori
 
 ## Dependencias
 
-- `useFavorites` hook
-- `ExperienceCard` componente
-- Dataset de `@/data/experiences`
+- `useFavorites` del contexto de favoritos.
+- Dataset local `experiences`.
+- `ExperienceCard` para mostrar cada favorito.
+- `BackToTop` componente compartido (especificación: `specs/back-to-top.md`).
+
+## Stack técnico y restricciones
+
+| Tecnología | Versión / Detalle |
+|---|---|
+| **Framework** | Next.js 16 (App Router) |
+| **Lenguaje** | TypeScript (tipado estricto) |
+| **Estilos** | Tailwind CSS v4 |
+| **Fuentes** | Geist / Geist Mono (Google Fonts vía `next/font`) |
+| **Estado global** | React Context API + `useState` (sin Redux, Zustand ni librerías externas) |
+| **Routing** | App Router (`page.tsx`, client component) |
+| **Navegación cliente** | `next/link` (`Link`) + `useFavorites()` |
+| **SEO** | `document.title` vía `useEffect` (client component) |
+| **Accesibilidad** | Roles ARIA, `role="status"` en estado vacío, `aria-hidden` en iconos |
+| **Animaciones** | CSS `@keyframes` (stagger) + Tailwind `animate-*` |
+| **Dataset** | Local (`src/data/experiences.ts`), filtrado por IDs de favoritos |
+| **Condiciones** | Sin persistencia de datos, sin API externa, sin autenticación, sin base de datos |
 
 ## Criterios de aceptación
 

@@ -36,6 +36,8 @@ Página principal de exploración donde los usuarios pueden buscar experiencias 
 ### Resultados
 - Si no hay coincidencias, mostrar mensaje: **"No se encontraron resultados"**.
 - Grid responsivo de `ExperienceCard`.
+- Incluir `BackToTop` como control flotante compartido; ver `specs/back-to-top.md`.
+- Durante la carga, la página (`src/app/experiences/page.tsx`) debe mostrar tarjetas `SkeletonCard` dentro del fallback de `Suspense`.
 
 ## UI/UX
 
@@ -68,7 +70,28 @@ Página principal de exploración donde los usuarios pueden buscar experiencias 
 - `FilterBar` componente
 - `ExperienceCard` componente
 - `useExperiences` custom hook
+- `BackToTop` control flotante compartido (especificación: `specs/back-to-top.md`)
+- `SkeletonCard` como placeholder de carga dentro de `Suspense`
 - `useSearchParams`, `useRouter`, `usePathname` de Next.js
+
+## Stack técnico y restricciones
+
+| Tecnología | Versión / Detalle |
+|---|---|
+| **Framework** | Next.js 16 (App Router) |
+| **Lenguaje** | TypeScript (tipado estricto) |
+| **Estilos** | Tailwind CSS v4 |
+| **Fuentes** | Geist / Geist Mono (Google Fonts vía `next/font`) |
+| **Estado global** | React Context API + `useState` (sin Redux, Zustand ni librerías externas) |
+| **Routing** | App Router (`page.tsx` con `Suspense` para `useSearchParams`) |
+| **Navegación cliente** | `next/navigation` (`useRouter`, `useSearchParams`, `usePathname`) |
+| **SEO** | Metadata exportable desde server component |
+| **Accesibilidad** | Roles ARIA, `aria-live` para resultados, `aria-label` en controles, `role="search"` |
+| **Animaciones** | CSS `@keyframes` (fade-in, stagger) + Tailwind `animate-*` |
+| **Dataset** | Local (`src/data/experiences.ts`), filtrado con `useMemo` |
+| **Búsqueda** | Regex case-insensitive con escape de caracteres especiales; debounce 300ms en SearchBar |
+| **URL** | Query parameters compartibles (`?search=&category=&destination=`) |
+| **Condiciones** | Sin persistencia de datos, sin API externa, sin autenticación, sin base de datos |
 
 ## Criterios de aceptación
 

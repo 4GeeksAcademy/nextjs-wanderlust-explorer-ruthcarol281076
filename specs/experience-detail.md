@@ -31,6 +31,8 @@ Página de detalle de una experiencia individual, accesible desde el explorador 
 - Usar `useEffect` para actualizar `document.title` con el título de la experiencia.
 - Botón para volver al explorador (`/experiences`).
 - Manejar el caso de ID no encontrado.
+- La página `src/app/experiences/[id]/page.tsx` muestra `DetailSkeleton` como fallback de `Suspense` mientras carga el detalle.
+- La ruta `src/app/experiences/[id]/not-found.tsx` presenta el estado `ExperienceNotFound` cuando no existe el ID.
 
 ## UI/UX
 
@@ -59,8 +61,28 @@ Página de detalle de una experiencia individual, accesible desde el explorador 
 - Dataset de `@/data/experiences`
 - `useFavorites` hook
 - `FavoriteButton` componente
+- `DetailSkeleton` fallback de carga de la página de detalle
+- `ExperienceNotFound` estado 404 específico de la ruta de detalle
 - `useEffect` para título del documento
 - `Link` de Next.js para volver
+
+## Stack técnico y restricciones
+
+| Tecnología | Versión / Detalle |
+|---|---|
+| **Framework** | Next.js 16 (App Router) |
+| **Lenguaje** | TypeScript (tipado estricto) |
+| **Estilos** | Tailwind CSS v4 |
+| **Fuentes** | Geist / Geist Mono (Google Fonts vía `next/font`) |
+| **Estado global** | React Context API + `useState` (sin Redux, Zustand ni librerías externas) |
+| **Routing** | App Router, ruta dinámica `[id]`, `params: Promise<{ id: string }>` (Next.js 16) |
+| **Navegación cliente** | `next/navigation` (`useRouter`, `notFound`) |
+| **SEO** | `generateMetadata` dinámico con título, descripción e imágenes OG |
+| **Accesibilidad** | Roles ARIA, `aria-label` en botones, `aria-hidden` en iconos decorativos |
+| **Animaciones** | CSS `@keyframes` (fade-in-up) + Tailwind `animate-*` |
+| **Dataset** | Local (`src/data/experiences.ts`), búsqueda por ID numérico |
+| **Imágenes** | URLs externas (`placehold.co`) con `loading="lazy"` |
+| **Condiciones** | Sin persistencia de datos, sin API externa, sin autenticación, sin base de datos |
 
 ## Criterios de aceptación
 

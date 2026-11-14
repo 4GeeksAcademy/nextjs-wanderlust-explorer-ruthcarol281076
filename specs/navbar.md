@@ -54,6 +54,21 @@ Barra de navegación principal visible en todas las páginas con enlaces a las r
 - `useFavorites` hook de `FavoritesContext` (para el contador).
 - `next/link` y `next/navigation` (`usePathname`).
 
+## Stack técnico y restricciones
+
+| Tecnología | Versión / Detalle |
+|---|---|
+| **Framework** | Next.js 16 (App Router) |
+| **Lenguaje** | TypeScript (tipado estricto) |
+| **Estilos** | Tailwind CSS v4 |
+| **Fuentes** | Geist / Geist Mono (Google Fonts vía `next/font`) |
+| **Estado global** | React Context API + `useState` (sin Redux, Zustand ni librerías externas) |
+| **Routing** | `usePathname()` para determinar enlace activo |
+| **Navegación cliente** | `next/link` (`Link`) + `next/navigation` (`usePathname`) |
+| **Accesibilidad** | `aria-label`, `aria-current="page"`, `aria-expanded`, `aria-controls`, etiquetas en español |
+| **Animaciones** | Transiciones CSS en hover, menú mobile con `max-h` transition |
+| **Condiciones** | Sin persistencia de datos, sin API externa, sin autenticación |
+
 ## Criterios de aceptación
 
 - [ ] Los 4 enlaces (Home, Experiences, Favorites, Profile) están presentes y navegan correctamente.

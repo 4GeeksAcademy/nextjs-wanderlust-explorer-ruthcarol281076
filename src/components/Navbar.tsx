@@ -11,10 +11,10 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "Experiences", href: "/experiences" },
-  { label: "Favorites", href: "/favorites" },
-  { label: "Profile", href: "/profile" },
+  { label: "Inicio", href: "/" },
+  { label: "Experiencias", href: "/experiences" },
+  { label: "Favoritos", href: "/favorites" },
+  { label: "Perfil", href: "/profile" },
 ];
 
 export default function Navbar() {
@@ -28,25 +28,27 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md" aria-label="Navegación principal">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo / Brand */}
           <Link
             href="/"
             className="text-xl font-bold text-[#EA580C] hover:text-[#d04d0a] transition-colors"
+            aria-label="Ir al inicio"
           >
             🌍 Wanderlust Explorer
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center gap-6">
+          <ul className="hidden md:flex items-center gap-6" role="list">
             {navLinks.map((link) => {
               const active = isActive(link.href);
               return (
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    aria-current={active ? "page" : undefined}
                     className={`relative text-sm md:text-base font-medium transition-colors duration-200 hover:text-[#EA580C] ${
                       active
                         ? "text-[#EA580C] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#EA580C]"
@@ -54,7 +56,7 @@ export default function Navbar() {
                     }`}
                   >
                     <span className="flex items-center gap-1.5">
-                      {link.label === "Favorites" && (
+                      {link.label === "Favoritos" && (
                         <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full bg-[#EA580C] text-white text-xs font-bold">
                           {favorites.length}
                         </span>
@@ -74,6 +76,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             <span
               className={`block w-6 h-[2px] bg-gray-700 transition-transform duration-300 ${
@@ -96,11 +99,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
+        role="navigation"
+        aria-label="Navegación móvil"
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <ul className="flex flex-col px-4 pb-4 gap-2">
+        <ul className="flex flex-col px-4 pb-4 gap-2" role="list">
           {navLinks.map((link) => {
             const active = isActive(link.href);
             return (
@@ -108,6 +114,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
+                  aria-current={active ? "page" : undefined}
                   className={`block px-4 py-2.5 rounded-lg text-base font-medium transition-colors duration-200 ${
                     active
                       ? "bg-[#EA580C] text-white"
@@ -115,7 +122,7 @@ export default function Navbar() {
                   }`}
                 >
                   <span className="flex items-center gap-2">
-                    {link.label === "Favorites" && (
+                    {link.label === "Favoritos" && (
                       <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 rounded-full bg-white text-[#EA580C] text-xs font-bold">
                         {favorites.length}
                       </span>

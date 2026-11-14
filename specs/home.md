@@ -7,6 +7,8 @@
 
 Página de inicio con una sección hero llamativa que invite al usuario a explorar experiencias, y una navegación clara hacia el explorador.
 
+La sección principal está implementada por el componente compartido `HeroSection` (`src/components/HeroSection.tsx`).
+
 ## Props y estado
 
 | Nombre | Tipo | Origen | Descripción |
@@ -40,10 +42,21 @@ Página de inicio con una sección hero llamativa que invite al usuario a explor
 | `Link` | Navegación cliente desde el botón CTA del hero hacia `/experiences` |
 | `page.tsx` (App Router) | Página estática renderizada en la ruta `/` |
 
-## Dependencias
+## Stack técnico y restricciones
 
-- `Link` de Next.js.
-- Opcional: `ExperienceCard` si se muestran destacadas.
+| Tecnología | Versión / Detalle |
+|---|---|
+| **Framework** | Next.js 16 (App Router) |
+| **Lenguaje** | TypeScript (tipado estricto) |
+| **Estilos** | Tailwind CSS v4 |
+| **Fuentes** | Geist / Geist Mono (Google Fonts vía `next/font`) |
+| **Estado global** | React Context API + `useState` (sin Redux, Zustand ni librerías externas) |
+| **Routing** | App Router (`page.tsx`, rutas estáticas) |
+| **Navegación cliente** | `next/link` (`Link`) |
+| **SEO** | Metadata exportable desde server component |
+| **Accesibilidad** | Roles ARIA, `aria-label`, `aria-hidden` |
+| **Animaciones** | CSS `@keyframes` (fade-in-up) + Tailwind `animate-*` |
+| **Condiciones** | Sin persistencia de datos, sin API externa, sin autenticación, sin base de datos |
 
 ## Criterios de aceptación
 

@@ -6,15 +6,19 @@ interface ExperienceCardProps {
   experience: Experience;
 }
 
-const categoryColors: Record<
-  Experience["category"],
-  { bg: string; text: string }
-> = {
-  Adventure: { bg: "bg-orange-100", text: "text-orange-700" },
-  Culture: { bg: "bg-purple-100", text: "text-purple-700" },
-  Food: { bg: "bg-green-100", text: "text-green-700" },
-  Wellness: { bg: "bg-blue-100", text: "text-blue-700" },
-  Nature: { bg: "bg-teal-100", text: "text-teal-700" },
+interface CategoryStyle {
+  bg: string;
+  text: string;
+  gradient: string;
+  label: string;
+}
+
+const categoryStyles: Record<Experience["category"], CategoryStyle> = {
+  Adventure: { bg: "bg-orange-100", text: "text-orange-700", gradient: "from-orange-900/40 via-orange-800/20 to-transparent", label: "Aventura" },
+  Culture: { bg: "bg-purple-100", text: "text-purple-700", gradient: "from-purple-900/40 via-purple-800/20 to-transparent", label: "Cultura" },
+  Food: { bg: "bg-green-100", text: "text-green-700", gradient: "from-green-900/40 via-green-800/20 to-transparent", label: "Gastronomía" },
+  Wellness: { bg: "bg-blue-100", text: "text-blue-700", gradient: "from-blue-900/40 via-blue-800/20 to-transparent", label: "Bienestar" },
+  Nature: { bg: "bg-teal-100", text: "text-teal-700", gradient: "from-teal-900/40 via-teal-800/20 to-transparent", label: "Naturaleza" },
 };
 
 export default function ExperienceCard({
@@ -22,34 +26,36 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   const { id, title, description, category, destination, price, rating, imageUrl } =
     experience;
-  const catStyle = categoryColors[category];
+  const sty = categoryStyles[category];
 
   return (
     <article className="group relative flex flex-col rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden border border-gray-100">
       {/* Image */}
-      <Link href={`/experiences/${id}`} className="relative aspect-[4/3] overflow-hidden">
+      <Link href={`/experiences/${id}`} className="relative aspect-[4/3] overflow-hidden block">
+        <div className={`absolute inset-0 bg-gradient-to-b ${sty.gradient} z-10 pointer-events-none`} />
         <img
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
+          role="img"
         />
         {/* Category badge */}
         <span
-          className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-medium ${catStyle.bg} ${catStyle.text}`}
+          className={`absolute top-3 left-3 px-2.5 py-1 rounded-full text-xs font-medium z-20 pointer-events-none ${sty.bg} ${sty.text}`}
         >
-          {category}
+          {sty.label}
         </span>
-        {/* Favorite button */}
-        <div className="absolute top-3 right-3">
+        {/* Favorite button — outside the Link to avoid navigation */}
+      </Link>
+        <div className="absolute top-3 right-3 z-30">
           <FavoriteButton experienceId={id} />
         </div>
-      </Link>
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-4 gap-2">
         <div className="flex items-start justify-between gap-2">
-          <h3 className="text-lg font-semibold text-gray-900 leading-snug line-clamp-1">
+          <h3 className="text-sm font-bold text-gray-800 leading-snug line-clamp-1 text-ellipsis overflow-hidden">
             <Link href={`/experiences/${id}`} className="hover:text-[#EA580C] transition-colors">
               {title}
             </Link>

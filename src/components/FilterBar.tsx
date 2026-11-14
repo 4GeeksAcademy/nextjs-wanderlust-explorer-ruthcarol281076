@@ -47,16 +47,13 @@ export default function FilterBar() {
   const categoryValue = useMemo(() => currentCategory, [currentCategory]);
 
   return (
-    <div className="flex flex-col sm:flex-row gap-3 sm:items-end">
+    <div className="flex flex-col sm:flex-row gap-3 sm:items-end" role="search" aria-label="Filtros de búsqueda">
       {/* Category filter */}
-      <div className="flex-1">
-        <label
-          htmlFor="category-filter"
-          className="block text-xs font-medium text-gray-500 mb-1.5 uppercase tracking-wider"
-        >
+      <fieldset className="flex-1 border-0 p-0 m-0">
+        <legend className="block text-xs font-medium text-gray-500 mb-1.5 uppercase tracking-wider">
           Categoría
-        </label>
-        <div className="flex flex-wrap gap-2">
+        </legend>
+        <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Filtrar por categoría">
           {CATEGORIES.map((cat) => {
             const isActive =
               cat === "All"
@@ -66,6 +63,8 @@ export default function FilterBar() {
               <button
                 key={cat}
                 type="button"
+                role="radio"
+                aria-checked={isActive}
                 onClick={() =>
                   updateParam("category", cat === "All" ? "" : cat.toLowerCase())
                 }
@@ -80,7 +79,7 @@ export default function FilterBar() {
             );
           })}
         </div>
-      </div>
+      </fieldset>
 
       {/* Destination filter */}
       <div className="sm:w-56">

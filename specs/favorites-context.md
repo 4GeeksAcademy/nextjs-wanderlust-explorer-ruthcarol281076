@@ -45,9 +45,18 @@ Proveer un estado compartido de favoritos que esté disponible en todas las pág
 |---|---|
 | `"use client"` | Directiva necesaria en `FavoritesProvider` por usar hooks de React (`useState`, `createContext`) |
 
-## Dependencias
+## Stack técnico y restricciones
 
-- Ninguna. Puede implementarse antes que cualquier componente.
+| Tecnología | Versión / Detalle |
+|---|---|
+| **Framework** | React 19 (Context API) |
+| **Lenguaje** | TypeScript (tipado estricto) |
+| **Estado global** | `React.createContext` + `useState` (sin Redux, Zustand ni librerías externas) |
+| **Componente** | `"use client"` obligatorio por usar hooks de React |
+| **Datos** | `favorites: number[]` (IDs, no objetos completos) |
+| **Persistencia** | Ninguna — estado en memoria, se pierde al recargar |
+| **Exposición** | `FavoritesProvider` + `useFavorites()` con guard para provider ausente |
+| **Condiciones** | Sin API externa, sin autenticación, sin base de datos |
 
 ## Criterios de aceptación
 

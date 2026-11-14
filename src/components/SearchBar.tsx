@@ -30,6 +30,14 @@ export default function SearchBar() {
     [router, pathname, searchParams]
   );
 
+  // Debounce: actualiza la URL al escribir sin recargar
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      updateSearch(inputValue);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [inputValue, updateSearch]);
+
   const handleSubmit = useCallback(
     (e: React.FormEvent) => {
       e.preventDefault();
@@ -45,7 +53,7 @@ export default function SearchBar() {
 
 
   return (
-    <form onSubmit={handleSubmit} className="relative w-full max-w-xl">
+    <form onSubmit={handleSubmit} className="relative w-full max-w-xl" role="search" aria-label="Búsqueda de experiencias">
       <div className="relative">
         {/* Search icon */}
         <svg
@@ -55,6 +63,7 @@ export default function SearchBar() {
           viewBox="0 0 24 24"
           stroke="currentColor"
           strokeWidth={2}
+          aria-hidden="true"
         >
           <path
             strokeLinecap="round"
@@ -68,6 +77,7 @@ export default function SearchBar() {
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Buscar experiencias..."
+          aria-label="Buscar experiencias por título"
           className="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-200 bg-white text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#EA580C]/30 focus:border-[#EA580C] transition-all shadow-sm"
         />
 
