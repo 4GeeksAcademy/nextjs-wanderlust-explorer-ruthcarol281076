@@ -252,12 +252,15 @@ Cada SPEC se creará como archivo independiente en `specs/` con la siguiente est
 
 ```
 specs/
-├── favorites-context.md   # Contexto compartido de favoritos
-├── home.md                # Página Home (/)
-├── explorer.md            # Explorador (/experiences)
-├── experience-detail.md   # Detalle de experiencia (/experiences/[id])
-├── favorites.md           # Página de favoritos (/favorites)
-└── profile.md             # Página de perfil (/profile)
+├── template.md              # Plantilla para SPECs
+├── favorites-context.md     # Contexto compartido de favoritos
+├── navbar.md                # Componente Navbar
+├── layout.md                # Layout raíz
+├── home.md                  # Página Home (/)
+├── explorer.md              # Explorador (/experiences)
+├── experience-detail.md     # Detalle de experiencia (/experiences/[id])
+├── favorites-page.md        # Página de favoritos (/favorites)
+└── profile.md               # Página de perfil (/profile)
 ```
 
 Cada SPEC contendrá:

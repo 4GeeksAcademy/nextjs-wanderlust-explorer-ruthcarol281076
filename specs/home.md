@@ -1,0 +1,55 @@
+# SPEC — Home (/)
+
+> **Fase 2 — Home**
+> **Fecha:** 2026-11-14
+
+## Objetivo
+
+Página de inicio con una sección hero llamativa que invite al usuario a explorar experiencias, y una navegación clara hacia el explorador.
+
+## Props y estado
+
+| Nombre | Tipo | Origen | Descripción |
+|---|---|---|---|
+| — | — | — | Página estática sin props. Usa `Link` de Next.js para navegación. |
+
+## Comportamiento
+
+- Sección hero con:
+  - Título principal (ej. "Descubre experiencias únicas alrededor del mundo")
+  - Subtítulo descriptivo (ej. "Explora, filtra y guarda las mejores actividades en cada destino")
+  - Botón CTA "Explorar ahora" que navega a `/experiences` usando `next/link`
+- La navegación debe ser del lado del cliente (sin recarga completa de página).
+- Sección opcional "Experiencias destacadas" mostrando 3-4 tarjetas del dataset.
+
+## UI/UX
+
+- Hero con gradiente o imagen de fondo de gran tamaño.
+- Diseño responsivo: hero adaptado a móvil (texto más pequeño, imagen recortada).
+- Colores coherentes con la marca Wanderlust (tonos azul profundo, blanco, toques cálidos).
+- Botón CTA con hover effect.
+
+## Casos borde
+
+- **Sin experiencias destacadas**: si se decide no mostrar destacadas, la página debe verse completa solo con el hero.
+
+## Componentes de Next.js aplicables
+
+| Componente / API | Función |
+|---|---|
+| `Link` | Navegación cliente desde el botón CTA del hero hacia `/experiences` |
+| `page.tsx` (App Router) | Página estática renderizada en la ruta `/` |
+
+## Dependencias
+
+- `Link` de Next.js.
+- Opcional: `ExperienceCard` si se muestran destacadas.
+
+## Criterios de aceptación
+
+- [ ] La Home incluye un botón que navega a `/experiences`.
+- [ ] La navegación desde el hero no recarga la página (App Router cliente).
+- [ ] El hero es responsivo (se ve bien en móvil y escritorio).
+- [ ] (Generales) `useEffect` se usa correctamente con arrays de dependencias adecuados (sin bucles infinitos ni dependencias faltantes).
+- [ ] (Generales) Los tipos e interfaces de TypeScript están definidos y se usan de forma consistente.
+- [ ] (Generales) La app es responsiva y visualmente coherente entre páginas.
