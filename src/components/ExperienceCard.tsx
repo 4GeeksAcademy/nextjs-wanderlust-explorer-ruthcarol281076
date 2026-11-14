@@ -14,11 +14,11 @@ interface CategoryStyle {
 }
 
 const categoryStyles: Record<Experience["category"], CategoryStyle> = {
-  Adventure: { bg: "bg-orange-100", text: "text-orange-700", gradient: "from-orange-900/40 via-orange-800/20 to-transparent", label: "Aventura" },
-  Culture: { bg: "bg-purple-100", text: "text-purple-700", gradient: "from-purple-900/40 via-purple-800/20 to-transparent", label: "Cultura" },
-  Food: { bg: "bg-green-100", text: "text-green-700", gradient: "from-green-900/40 via-green-800/20 to-transparent", label: "Gastronomía" },
-  Wellness: { bg: "bg-blue-100", text: "text-blue-700", gradient: "from-blue-900/40 via-blue-800/20 to-transparent", label: "Bienestar" },
-  Nature: { bg: "bg-teal-100", text: "text-teal-700", gradient: "from-teal-900/40 via-teal-800/20 to-transparent", label: "Naturaleza" },
+  Adventure: { bg: "bg-orange-100", text: "text-orange-700", gradient: "from-orange-900/60 via-orange-800/35 to-transparent", label: "Aventura" },
+  Culture: { bg: "bg-purple-100", text: "text-purple-700", gradient: "from-purple-900/60 via-purple-800/35 to-transparent", label: "Cultura" },
+  Food: { bg: "bg-green-100", text: "text-green-700", gradient: "from-green-900/60 via-green-800/35 to-transparent", label: "Gastronomía" },
+  Wellness: { bg: "bg-blue-100", text: "text-blue-700", gradient: "from-blue-900/60 via-blue-800/35 to-transparent", label: "Bienestar" },
+  Nature: { bg: "bg-teal-100", text: "text-teal-700", gradient: "from-teal-900/60 via-teal-800/35 to-transparent", label: "Naturaleza" },
 };
 
 export default function ExperienceCard({
@@ -54,9 +54,9 @@ export default function ExperienceCard({
 
       {/* Content */}
       <div className="flex flex-col flex-1 p-4 gap-2">
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="text-sm font-bold text-gray-800 leading-snug line-clamp-1 text-ellipsis overflow-hidden">
-            <Link href={`/experiences/${id}`} className="hover:text-[#EA580C] transition-colors">
+        <div className="flex items-start gap-2">
+          <h3 className="min-w-0 flex-1 text-sm font-bold text-gray-800 leading-snug">
+            <Link href={`/experiences/${id}`} className="block truncate hover:text-[#EA580C] transition-colors">
               {title}
             </Link>
           </h3>

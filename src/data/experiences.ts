@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     destination: "Dubrovnik, Croatia",
     price: 89,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/1a73e8/white?text=Sunset+Sailing"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     destination: "Bangkok, Thailand",
     price: 45,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Street+Food"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const experiences: Experience[] = [
     destination: "Siem Reap, Cambodia",
     price: 65,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/ff9800/white?text=Angkor+Wat"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const experiences: Experience[] = [
     destination: "Ubud, Indonesia",
     price: 350,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/4caf50/white?text=Yoga+Retreat"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
     destination: "Cusco, Peru",
     price: 520,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Inca+Trail"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ export const experiences: Experience[] = [
     destination: "Tromsø, Norway",
     price: 280,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Northern+Lights"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ export const experiences: Experience[] = [
     destination: "Kyoto, Japan",
     price: 55,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/607d8b/white?text=Tea+Ceremony"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ export const experiences: Experience[] = [
     destination: "Florence, Italy",
     price: 95,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/795548/white?text=Wine+Tasting"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 9,
@@ -89,7 +89,7 @@ export const experiences: Experience[] = [
     destination: "Manaus, Brazil",
     price: 420,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/388e3c/white?text=Amazon+Jungle"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 10,
@@ -99,7 +99,7 @@ export const experiences: Experience[] = [
     destination: "Marrakech, Morocco",
     price: 180,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/f44336/white?text=Desert+Camp"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 11,
@@ -109,7 +109,7 @@ export const experiences: Experience[] = [
     destination: "Cappadocia, Turkey",
     price: 200,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/ff5722/white?text=Hot+Air+Balloon"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 12,
@@ -119,7 +119,7 @@ export const experiences: Experience[] = [
     destination: "Rome, Italy",
     price: 75,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Cooking+Class"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 13,
@@ -129,7 +129,7 @@ export const experiences: Experience[] = [
     destination: "Cairns, Australia",
     price: 150,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/00bcd4/white?text=Great+Barrier+Reef"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 14,
@@ -139,7 +139,7 @@ export const experiences: Experience[] = [
     destination: "Seville, Spain",
     price: 50,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Flamenco"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 15,
@@ -149,7 +149,7 @@ export const experiences: Experience[] = [
     destination: "Dharamshala, India",
     price: 290,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/009688/white?text=Himalayan+Retreat"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 16,
@@ -159,7 +159,7 @@ export const experiences: Experience[] = [
     destination: "Arusha, Tanzania",
     price: 650,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/8bc34a/white?text=Serengeti+Safari"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 17,
@@ -169,7 +169,7 @@ export const experiences: Experience[] = [
     destination: "Venice, Italy",
     price: 80,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/3f51b5/white?text=Venice+Canals"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 18,
@@ -179,7 +179,7 @@ export const experiences: Experience[] = [
     destination: "Turin, Italy",
     price: 130,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/795548/white?text=Truffle+Hunting"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 19,
@@ -189,7 +189,7 @@ export const experiences: Experience[] = [
     destination: "Belize City, Belize",
     price: 240,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/03a9f4/white?text=Blue+Hole"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 20,
@@ -199,7 +199,7 @@ export const experiences: Experience[] = [
     destination: "Seminyak, Indonesia",
     price: 120,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/4caf50/white?text=Balinese+Spa"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 21,
@@ -209,7 +209,7 @@ export const experiences: Experience[] = [
     destination: "Hanoi, Vietnam",
     price: 110,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/00bcd4/white?text=Halong+Bay"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 22,
@@ -219,7 +219,7 @@ export const experiences: Experience[] = [
     destination: "Rome, Italy",
     price: 60,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/ff9800/white?text=Colosseum"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 23,
@@ -229,7 +229,7 @@ export const experiences: Experience[] = [
     destination: "Tokyo, Japan",
     price: 85,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Sushi+Workshop"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 24,
@@ -239,7 +239,7 @@ export const experiences: Experience[] = [
     destination: "Reykjavik, Iceland",
     price: 160,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Glacier+Hiking"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 25,
@@ -249,7 +249,7 @@ export const experiences: Experience[] = [
     destination: "Bangkok, Thailand",
     price: 40,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/ff5722/white?text=Floating+Market"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 26,
@@ -259,7 +259,7 @@ export const experiences: Experience[] = [
     destination: "Barcelona, Spain",
     price: 70,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Wine+Tapas"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 27,
@@ -269,7 +269,7 @@ export const experiences: Experience[] = [
     destination: "Probolinggo, Indonesia",
     price: 75,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/607d8b/white?text=Mount+Bromo"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 28,
@@ -279,7 +279,7 @@ export const experiences: Experience[] = [
     destination: "Istanbul, Turkey",
     price: 60,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/3f51b5/white?text=Turkish+Hamam"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 29,
@@ -289,7 +289,7 @@ export const experiences: Experience[] = [
     destination: "Petra, Jordan",
     price: 55,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/f44336/white?text=Petra+By+Night"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 30,
@@ -299,7 +299,7 @@ export const experiences: Experience[] = [
     destination: "Livingstone, Zambia",
     price: 145,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/ff9800/white?text=White+Water+Rafting"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 31,
@@ -309,7 +309,7 @@ export const experiences: Experience[] = [
     destination: "Bologna, Italy",
     price: 80,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Pasta+Making"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 32,
@@ -319,7 +319,7 @@ export const experiences: Experience[] = [
     destination: "Copenhagen, Denmark",
     price: 65,
     rating: 4.3,
-    imageUrl: "https://placehold.co/600x400/8bc34a/white?text=Elderflower+Foraging"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 33,
@@ -329,7 +329,7 @@ export const experiences: Experience[] = [
     destination: "Paris, France",
     price: 55,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Montmartre"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 34,
@@ -339,7 +339,7 @@ export const experiences: Experience[] = [
     destination: "Lagos, Portugal",
     price: 380,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/03a9f4/white?text=Surf+Camp"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 35,
@@ -349,7 +349,7 @@ export const experiences: Experience[] = [
     destination: "Belém, Brazil",
     price: 210,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/388e3c/white?text=Amazon+River"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 36,
@@ -359,7 +359,7 @@ export const experiences: Experience[] = [
     destination: "Sedona, USA",
     price: 140,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/ff5722/white?text=Sound+Healing"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 37,
@@ -369,7 +369,7 @@ export const experiences: Experience[] = [
     destination: "Jaisalmer, India",
     price: 120,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/ff9800/white?text=Thar+Desert"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 38,
@@ -379,7 +379,7 @@ export const experiences: Experience[] = [
     destination: "Brussels, Belgium",
     price: 65,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/795548/white?text=Chocolate+Workshop"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 39,
@@ -389,7 +389,7 @@ export const experiences: Experience[] = [
     destination: "Bamako, Mali",
     price: 300,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/607d8b/white?text=Dogon+Trek"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 40,
@@ -399,7 +399,7 @@ export const experiences: Experience[] = [
     destination: "Höfn, Iceland",
     price: 175,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Ice+Caves"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 41,
@@ -409,7 +409,7 @@ export const experiences: Experience[] = [
     destination: "Kochi, India",
     price: 480,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/4caf50/white?text=Ayurvedic+Retreat"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 42,
@@ -419,7 +419,7 @@ export const experiences: Experience[] = [
     destination: "San Pedro de Atacama, Chile",
     price: 130,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/f44336/white?text=Quad+Biking"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 43,
@@ -429,7 +429,7 @@ export const experiences: Experience[] = [
     destination: "Edinburgh, UK",
     price: 25,
     rating: 4.3,
-    imageUrl: "https://placehold.co/600x400/3f51b5/white?text=Ghost+Tour"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 44,
@@ -439,7 +439,7 @@ export const experiences: Experience[] = [
     destination: "Tours, France",
     price: 90,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Cheese+Tasting"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 45,
@@ -449,7 +449,7 @@ export const experiences: Experience[] = [
     destination: "Interlaken, Switzerland",
     price: 170,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/00bcd4/white?text=Mountain+Biking"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 46,
@@ -459,7 +459,7 @@ export const experiences: Experience[] = [
     destination: "Nuwara Eliya, Sri Lanka",
     price: 35,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/8bc34a/white?text=Tea+Plantation"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 47,
@@ -469,7 +469,7 @@ export const experiences: Experience[] = [
     destination: "Cartagena, Colombia",
     price: 85,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/ff5722/white?text=Horseback+Ride"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 48,
@@ -479,7 +479,7 @@ export const experiences: Experience[] = [
     destination: "Portland, USA",
     price: 60,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Craft+Beer"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 49,
@@ -489,7 +489,7 @@ export const experiences: Experience[] = [
     destination: "Ponta Delgada, Portugal",
     price: 95,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Dolphin+Watching"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 50,
@@ -499,7 +499,7 @@ export const experiences: Experience[] = [
     destination: "Chiang Mai, Thailand",
     price: 180,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/009688/white?text=Silent+Retreat"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 51,
@@ -509,7 +509,7 @@ export const experiences: Experience[] = [
     destination: "Rio de Janeiro, Brazil",
     price: 290,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/03a9f4/white?text=Skydiving+Rio"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 52,
@@ -519,7 +519,7 @@ export const experiences: Experience[] = [
     destination: "Oaxaca, Mexico",
     price: 45,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/ff9800/white?text=Pottery+Workshop"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 53,
@@ -529,7 +529,7 @@ export const experiences: Experience[] = [
     destination: "Inverness, UK",
     price: 75,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/4caf50/white?text=Foraging+Scotland"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 54,
@@ -539,7 +539,7 @@ export const experiences: Experience[] = [
     destination: "Chiang Mai, Thailand",
     price: 220,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Thai+Massage"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 55,
@@ -549,7 +549,7 @@ export const experiences: Experience[] = [
     destination: "Provence, France",
     price: 120,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/00bcd4/white?text=Verdon+Canyoning"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 56,
@@ -559,7 +559,7 @@ export const experiences: Experience[] = [
     destination: "Mexico City, Mexico",
     price: 40,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/f44336/white?text=Mexican+Street+Food"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 57,
@@ -569,7 +569,7 @@ export const experiences: Experience[] = [
     destination: "Monteverde, Costa Rica",
     price: 90,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/4caf50/white?text=Zipline+Costa+Rica"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 58,
@@ -579,7 +579,7 @@ export const experiences: Experience[] = [
     destination: "Kyoto, Japan",
     price: 50,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Geisha+Walk"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 59,
@@ -589,7 +589,7 @@ export const experiences: Experience[] = [
     destination: "Galway, Ireland",
     price: 55,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/607d8b/white?text=Oyster+Tasting"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 60,
@@ -599,7 +599,7 @@ export const experiences: Experience[] = [
     destination: "Bali, Indonesia",
     price: 45,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/ff5722/white?text=Batur+Sunrise"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 61,
@@ -609,7 +609,7 @@ export const experiences: Experience[] = [
     destination: "Bergen, Norway",
     price: 195,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Norwegian+Fjords"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 62,
@@ -619,7 +619,7 @@ export const experiences: Experience[] = [
     destination: "Tokyo, Japan",
     price: 70,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/ff9800/white?text=Kintsugi"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 63,
@@ -629,7 +629,7 @@ export const experiences: Experience[] = [
     destination: "Miami, USA",
     price: 65,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/8bc34a/white?text=Everglades+SUP"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 64,
@@ -639,7 +639,7 @@ export const experiences: Experience[] = [
     destination: "Freiburg, Germany",
     price: 55,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/388e3c/white?text=Forest+Bathing"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 65,
@@ -649,7 +649,7 @@ export const experiences: Experience[] = [
     destination: "Interlaken, Switzerland",
     price: 210,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/03a9f4/white?text=Paragliding"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 66,
@@ -659,7 +659,7 @@ export const experiences: Experience[] = [
     destination: "Lima, Peru",
     price: 65,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Peruvian+Cooking"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 67,
@@ -669,7 +669,7 @@ export const experiences: Experience[] = [
     destination: "Zanzibar, Tanzania",
     price: 50,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/ff5722/white?text=Zanzibar+Dhow"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 68,
@@ -679,7 +679,7 @@ export const experiences: Experience[] = [
     destination: "Victoria Falls, Zimbabwe",
     price: 165,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Victoria+Falls"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 69,
@@ -689,7 +689,7 @@ export const experiences: Experience[] = [
     destination: "Buenos Aires, Argentina",
     price: 35,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Tango+Class"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 70,
@@ -699,7 +699,7 @@ export const experiences: Experience[] = [
     destination: "Marrakech, Morocco",
     price: 90,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/f44336/white?text=Hammam+Spa"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 71,
@@ -709,7 +709,7 @@ export const experiences: Experience[] = [
     destination: "Maun, Botswana",
     price: 380,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/8bc34a/white?text=Okavango+Safari"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 72,
@@ -719,7 +719,7 @@ export const experiences: Experience[] = [
     destination: "Berlin, Germany",
     price: 30,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/3f51b5/white?text=Berlin+Street+Art"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 73,
@@ -729,7 +729,7 @@ export const experiences: Experience[] = [
     destination: "Amsterdam, Netherlands",
     price: 40,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/00bcd4/white?text=Amsterdam+Bike"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 74,
@@ -739,7 +739,7 @@ export const experiences: Experience[] = [
     destination: "Male, Maldives",
     price: 120,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/009688/white?text=Maldives+Snorkeling"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 75,
@@ -749,7 +749,7 @@ export const experiences: Experience[] = [
     destination: "Paris, France",
     price: 980,
     rating: 4.9,
-    imageUrl: "https://placehold.co/600x400/795548/white?text=Orient+Express"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 76,
@@ -759,7 +759,7 @@ export const experiences: Experience[] = [
     destination: "Cancún, Mexico",
     price: 55,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Ceviche+Class"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 77,
@@ -769,7 +769,7 @@ export const experiences: Experience[] = [
     destination: "Rovaniemi, Finland",
     price: 150,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Snowshoeing+Lapland"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 78,
@@ -779,7 +779,7 @@ export const experiences: Experience[] = [
     destination: "Ulaanbaatar, Mongolia",
     price: 160,
     rating: 4.3,
-    imageUrl: "https://placehold.co/600x400/ff9800/white?text=Gobi+Sound+Bath"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 79,
@@ -789,7 +789,7 @@ export const experiences: Experience[] = [
     destination: "Lisbon, Portugal",
     price: 45,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Fado+Night"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 80,
@@ -799,7 +799,7 @@ export const experiences: Experience[] = [
     destination: "Chiang Rai, Thailand",
     price: 85,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/4caf50/white?text=Elephant+Sanctuary"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 81,
@@ -809,7 +809,7 @@ export const experiences: Experience[] = [
     destination: "Bolzano, Italy",
     price: 140,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/f44336/white?text=Via+Ferrata"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 82,
@@ -819,7 +819,7 @@ export const experiences: Experience[] = [
     destination: "San Francisco, USA",
     price: 70,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/795548/white?text=Sourdough+Bread"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 83,
@@ -829,7 +829,7 @@ export const experiences: Experience[] = [
     destination: "Phuket, Thailand",
     price: 75,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/00bcd4/white?text=Phi+Phi+Islands"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 84,
@@ -839,7 +839,7 @@ export const experiences: Experience[] = [
     destination: "Havana, Cuba",
     price: 55,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Salsa+Cooking"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 85,
@@ -849,7 +849,7 @@ export const experiences: Experience[] = [
     destination: "Helsinki, Finland",
     price: 45,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Ice+Swimming"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 86,
@@ -859,7 +859,7 @@ export const experiences: Experience[] = [
     destination: "Setúbal, Portugal",
     price: 80,
     rating: 4.3,
-    imageUrl: "https://placehold.co/600x400/ff5722/white?text=Jeep+Safari"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 87,
@@ -869,7 +869,7 @@ export const experiences: Experience[] = [
     destination: "Marrakech, Morocco",
     price: 40,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/3f51b5/white?text=Calligraphy"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 88,
@@ -879,7 +879,7 @@ export const experiences: Experience[] = [
     destination: "Dubai, UAE",
     price: 95,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/ff9800/white?text=Dune+Bashing"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 89,
@@ -889,7 +889,7 @@ export const experiences: Experience[] = [
     destination: "La Paz, Mexico",
     price: 110,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Whale+Watching"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 90,
@@ -899,7 +899,7 @@ export const experiences: Experience[] = [
     destination: "Taghazout, Morocco",
     price: 35,
     rating: 4.3,
-    imageUrl: "https://placehold.co/600x400/4caf50/white?text=Acroyoga"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 91,
@@ -909,7 +909,7 @@ export const experiences: Experience[] = [
     destination: "Nassau, Bahamas",
     price: 65,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/f44336/white?text=Treasure+Hunt"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 92,
@@ -919,7 +919,7 @@ export const experiences: Experience[] = [
     destination: "Lausanne, Switzerland",
     price: 85,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Lake+Geneva+Cruise"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 93,
@@ -929,7 +929,7 @@ export const experiences: Experience[] = [
     destination: "Venice, Italy",
     price: 50,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/9c27b0/white?text=Mask+Venice"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 94,
@@ -939,7 +939,7 @@ export const experiences: Experience[] = [
     destination: "Vang Vieng, Laos",
     price: 20,
     rating: 4.3,
-    imageUrl: "https://placehold.co/600x400/00bcd4/white?text=River+Tubing"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 95,
@@ -949,7 +949,7 @@ export const experiences: Experience[] = [
     destination: "Tulum, Mexico",
     price: 30,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/ff5722/white?text=Sunset+Yoga+Tulum"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 96,
@@ -959,7 +959,7 @@ export const experiences: Experience[] = [
     destination: "Hua Hin, Thailand",
     price: 160,
     rating: 4.4,
-    imageUrl: "https://placehold.co/600x400/2196f3/white?text=Deep+Sea+Fishing"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 97,
@@ -969,7 +969,7 @@ export const experiences: Experience[] = [
     destination: "Barcelona, Spain",
     price: 55,
     rating: 4.5,
-    imageUrl: "https://placehold.co/600x400/3f51b5/white?text=Mosaic+Workshop"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 98,
@@ -979,7 +979,7 @@ export const experiences: Experience[] = [
     destination: "George Town, Bahamas",
     price: 250,
     rating: 4.8,
-    imageUrl: "https://placehold.co/600x400/8bc34a/white?text=Exumas+Sandbar"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 99,
@@ -989,7 +989,7 @@ export const experiences: Experience[] = [
     destination: "Seoul, South Korea",
     price: 60,
     rating: 4.7,
-    imageUrl: "https://placehold.co/600x400/e91e63/white?text=Korean+BBQ"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   },
   {
     id: 100,
@@ -999,6 +999,6 @@ export const experiences: Experience[] = [
     destination: "León, Nicaragua",
     price: 35,
     rating: 4.6,
-    imageUrl: "https://placehold.co/600x400/f44336/white?text=Volcano+Boarding"
+    imageUrl: "/images/placeholders/image-background-3-1.jpeg"
   }
 ];
