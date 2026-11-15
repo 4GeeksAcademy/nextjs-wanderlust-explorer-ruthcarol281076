@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[80vh] px-4 md:px-8 lg:items-start lg:px-16 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 md:px-8 lg:items-start lg:px-16 overflow-hidden">
       {/* Background gradient */}
       <div
         aria-hidden="true"

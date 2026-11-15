@@ -26,6 +26,7 @@ La sección principal está implementada por el componente compartido `HeroSecti
 
 ## UI/UX
 
+- El Hero tiene una altura mínima de `calc(100vh - 4rem)` para llenar el espacio visible debajo de la Navbar (de 4 rem) y evitar una franja vacía antes del Footer. Se conserva el degradado inferior hacia `gray-50`.
 - El Hero usa un gradiente teal con acentos cálidos y la imagen local `public/images/home/image-background-1.jpeg` en un panel lateral.
 - La imagen se muestra solo en escritorio (`lg` en adelante), centrada y sin deformación (`object-contain`), sobre un fondo blanco. La imagen y sus capas de color tienen opacidad del 75%.
 - En escritorio, el texto se presenta en una columna a la izquierda y la imagen a la derecha. Ambas comienzan a la misma altura; el ancho de la columna y su padding deben mantener una separación para que el texto no se superponga con la imagen.
@@ -66,6 +67,7 @@ La sección principal está implementada por el componente compartido `HeroSecti
 - [ ] La Home incluye un botón que navega a `/experiences`.
 - [ ] La navegación desde el hero no recarga la página (App Router cliente).
 - [ ] El hero es responsivo (se ve bien en móvil y escritorio).
+- [ ] El Hero ocupa como mínimo el espacio disponible bajo la Navbar y no deja un espacio vacío no intencionado antes del Footer; conserva el degradado inferior.
 - [ ] (Generales) `useEffect` se usa correctamente con arrays de dependencias adecuados (sin bucles infinitos ni dependencias faltantes).
 - [ ] (Generales) Los tipos e interfaces de TypeScript están definidos y se usan de forma consistente.
 - [ ] (Generales) La app es responsiva y visualmente coherente entre páginas.

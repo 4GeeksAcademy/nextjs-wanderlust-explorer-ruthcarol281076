@@ -4,7 +4,7 @@
 
 Wanderlust Explorer es un MVP en español para descubrir experiencias de viaje. Los usuarios pueden explorar un catálogo local, buscar y filtrar mediante parámetros compartibles en la URL, consultar detalles, guardar favoritos en estado de sesión y revisar un perfil simulado.
 
-La Home utiliza un Hero con gradiente teal y acentos cálidos. En escritorio muestra la imagen local `public/images/home/image-background-1.jpeg` en un panel lateral, centrado sin deformación, con base blanca y capas de color semitransparentes. El texto se distribuye en una columna independiente y debe conservar separación respecto a la imagen; en móvil y tablet se mantiene el diseño centrado sin mostrar el panel.
+La Home utiliza un Hero con gradiente teal y acentos cálidos. Tiene una altura mínima de `calc(100vh - 4rem)` para ocupar el espacio disponible bajo la Navbar y evitar una franja vacía antes del Footer; conserva un degradado inferior hacia `gray-50`. En escritorio muestra la imagen local `public/images/home/image-background-1.jpeg` en un panel lateral, centrado sin deformación, con base blanca y capas de color semitransparentes. El texto se distribuye en una columna independiente y debe conservar separación respecto a la imagen; en móvil y tablet se mantiene el diseño centrado sin mostrar el panel.
 
 ## 2. Objetivos
 

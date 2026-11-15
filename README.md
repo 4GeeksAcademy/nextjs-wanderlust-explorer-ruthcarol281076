@@ -19,7 +19,7 @@ Encontrar actividades relevantes para un viaje puede requerir revisar muchas fue
 - Guardar y quitar experiencias de favoritos, y consultar la página de favoritos.
 - Consultar un perfil simulado con el recuento de favoritos.
 - Mostrar estados de carga con skeletons, páginas 404 y metadatos por ruta.
-- Presentar en el Hero de la Home una imagen local en escritorio, integrada con el gradiente teal; en móvil se conserva el diseño centrado sin el panel de imagen.
+- Presentar en el Hero de la Home una imagen local en escritorio, integrada con el gradiente teal; en móvil se conserva el diseño centrado sin el panel de imagen. El Hero llena el espacio disponible bajo la Navbar y mantiene un degradado inferior hacia el Footer.
 - Usar el botón flotante compartido **Back to Top** en el explorador y favoritos: siempre visible, fijo al viewport y con scroll suave; incluye una flecha ascendente en un círculo, dibujada en SVG e inspirada en una referencia del proyecto.
 - Navegar por la interfaz en español.
 
