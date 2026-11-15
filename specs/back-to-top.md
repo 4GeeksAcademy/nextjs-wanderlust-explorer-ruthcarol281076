@@ -27,7 +27,8 @@ El componente no recibe props.
 
 - Botón circular de 48 × 48 px, colocado a 24 px del borde inferior y derecho del viewport (`fixed bottom-6 right-6`).
 - Fondo naranja (`#EA580C`), texto/icono blanco, sombra y cambios de color/escala al pasar el puntero o activar.
-- El icono es un SVG de trazo, con una flecha hacia arriba, `strokeWidth` 2, caps y joins redondeados, coherente con el estilo del icono de favoritos.
+- El icono es un SVG de trazo blanco con una flecha ascendente vertical y punta angular, enmarcada por un círculo. El trazo fino del círculo y el trazo ligeramente más grueso de la flecha adaptan la referencia `assets-dev/reference-image/reference-others/icon-bac-to-top.jpg` al botón de 48 × 48 px.
+- El SVG se muestra en 24 × 24 px y usa caps y joins redondeados.
 - El SVG se centra dentro del botón sin usar `display: flex` en el botón.
 - Etiqueta accesible: `aria-label="Volver al inicio de la página"`; el SVG es decorativo (`aria-hidden="true"`).
 
@@ -71,6 +72,6 @@ El componente no recibe props.
 - [ ] No queda anclado al final del contenido ni al footer.
 - [ ] Se renderiza en `document.body` mediante un portal para evitar ancestros que alteren el containing block de `position: fixed`.
 - [ ] Al activarlo, vuelve suavemente al inicio de la página.
-- [ ] El SVG muestra una flecha hacia arriba con estilo de trazo coherente con el icono de favoritos.
+- [ ] El SVG muestra una flecha ascendente vertical con punta angular dentro de un círculo, inspirada en `assets-dev/reference-image/reference-others/icon-bac-to-top.jpg`, en trazo blanco de 24 × 24 px.
 - [ ] El control tiene nombre accesible y el icono decorativo no se anuncia como contenido independiente.
 - [ ] El renderizado servidor/cliente no accede a `document` antes del efecto de montaje.

@@ -20,7 +20,7 @@ Encontrar actividades relevantes para un viaje puede requerir revisar muchas fue
 - Consultar un perfil simulado con el recuento de favoritos.
 - Mostrar estados de carga con skeletons, páginas 404 y metadatos por ruta.
 - Presentar en el Hero de la Home una imagen local en escritorio, integrada con el gradiente teal; en móvil se conserva el diseño centrado sin el panel de imagen.
-- Usar el botón flotante compartido **Back to Top** en el explorador y favoritos: siempre visible, fijo al viewport y con scroll suave.
+- Usar el botón flotante compartido **Back to Top** en el explorador y favoritos: siempre visible, fijo al viewport y con scroll suave; incluye una flecha ascendente en un círculo, dibujada en SVG e inspirada en una referencia del proyecto.
 - Navegar por la interfaz en español.
 
 ## Stack tecnológico
@@ -79,7 +79,7 @@ npm run start  # Sirve la compilación de producción (después de npm run build
 
 - **App Router:** las páginas y layouts se organizan bajo `src/app/`. Las rutas principales son `/`, `/experiences`, `/experiences/[id]`, `/favorites` y `/profile`.
 - **Componentes compartidos:** navegación, tarjetas, búsqueda, filtros, pie de página y otros elementos reutilizables viven en `src/components/`.
-- **BackToTop fuera del flujo de página:** el componente se monta con `createPortal` en `document.body` para evitar que transformaciones o animaciones de ancestros alteren la referencia de `position: fixed`. Se usa en `/experiences` y `/favorites`; no depende del footer ni de la posición de scroll.
+- **BackToTop fuera del flujo de página:** el componente se monta con `createPortal` en `document.body` para evitar que transformaciones o animaciones de ancestros alteren la referencia de `position: fixed`. Se usa en `/experiences` y `/favorites`; no depende del footer ni de la posición de scroll. Su icono SVG blanco combina una flecha ascendente vertical dentro de un círculo y se inspira en `assets-dev/reference-image/reference-others/icon-bac-to-top.jpg`.
 - **Favoritos con Context:** `src/context/FavoritesContext.tsx` comparte el estado de favoritos entre las páginas sin añadir una dependencia de gestión de estado.
 - **Datos locales:** las experiencias se importan desde `src/data/experiences.ts`. No hay backend, autenticación ni persistencia remota configurados.
 - **Búsqueda y filtros en la URL:** permite conservar y compartir el estado de exploración mediante los parámetros de consulta.

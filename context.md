@@ -52,7 +52,7 @@ Las interfaces de carga y no encontrado son parte de las rutas: `SkeletonCard` p
 - El corazón debe indicar claramente el estado activo o inactivo.
 - Los IDs favoritos deben mantenerse en estado React compartido y estar disponibles en el explorador, las tarjetas, Favoritos y Perfil.
 - No se requiere persistencia: los favoritos pueden perderse al recargar la aplicación.
-- El control flotante compartido `BackToTop` se incluye en `/experiences` y `/favorites`; permanece siempre visible, fijo al viewport y desplaza suavemente al inicio. Su especificación independiente está en `specs/back-to-top.md`.
+- El control flotante compartido `BackToTop` se incluye en `/experiences` y `/favorites`; permanece siempre visible, fijo al viewport y desplaza suavemente al inicio. Usa un SVG blanco de flecha ascendente dentro de un círculo, inspirado en `assets-dev/reference-image/reference-others/icon-bac-to-top.jpg`. Su especificación independiente está en `specs/back-to-top.md`.
 
 ### 4.4 Perfil
 
@@ -133,7 +133,7 @@ Registrar en el README los enlaces y una breve nota sobre los elementos relevant
 - No se permite Redux, Zustand u otra librería externa de estado.
 - La búsqueda debe cumplir el requisito de comparación mediante regex case-insensitive. Para tratar el término ingresado como texto literal, se recomienda escapar los caracteres especiales antes de construir la expresión regular.
 - Para compartir favoritos entre rutas del App Router, se necesita estado compartido de React situado en un nivel común de la aplicación, por ejemplo, un provider cliente en el layout raíz.
-- Para mantener `BackToTop` realmente fijo al viewport, el componente se monta con `createPortal` en `document.body`; no debe ser descendiente visual de contenedores que puedan crear un containing block para `position: fixed` (por ejemplo, con `transform`, `filter`, `perspective`, `contain` o `will-change`). El icono se centra sin `display: flex` en el botón.
+- Para mantener `BackToTop` realmente fijo al viewport, el componente se monta con `createPortal` en `document.body`; no debe ser descendiente visual de contenedores que puedan crear un containing block para `position: fixed` (por ejemplo, con `transform`, `filter`, `perspective`, `contain` o `will-change`). El icono SVG blanco (flecha ascendente vertical dentro de un círculo) se centra sin `display: flex` en el botón.
 - La transición de aparición del `<main>` es solo por opacidad; evita usar `transform` en un ancestro del control flotante.
 
 ## 11. Especificaciones funcionales
