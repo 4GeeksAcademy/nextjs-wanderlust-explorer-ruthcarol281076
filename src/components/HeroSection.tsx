@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[80vh] px-4 md:px-8 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center min-h-[80vh] px-4 md:px-8 lg:items-start lg:px-16 overflow-hidden">
       {/* Background gradient */}
       <div
         aria-hidden="true"
@@ -18,9 +18,25 @@ export default function HeroSection() {
         className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-[#EAB308]/20 blur-3xl"
       />
 
+      {/* Desktop-only image; layered with teal overlays to match the hero palette. */}
+      <div
+        aria-hidden="true"
+        className="absolute right-[7%] top-[14%] hidden h-[72%] w-[38%] max-w-[34rem] overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-[#042f2e]/30 lg:block"
+      >
+        <div className="absolute inset-0 opacity-75">
+          <img
+            src="/images/home/image-background-1.jpeg"
+            alt=""
+            className="h-full w-full object-contain object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0f766e]/70 via-[#0f766e]/20 to-[#115e59]/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#115e59]/45 via-transparent to-[#0D9488]/10" />
+        </div>
+      </div>
+
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl gap-6 animate-fade-in-up">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-3xl gap-6 animate-fade-in-up lg:absolute lg:left-[8%] lg:top-[14%] lg:ml-0 lg:max-w-[42%] lg:px-4 lg:items-start lg:text-left">
+        <h1 className="text-4xl md:text-5xl lg:text-[2.75rem] xl:text-5xl font-bold text-white leading-[1.1]">
           Descubre experiencias únicas
           <span className="text-[#EAB308]"> alrededor del mundo</span>
         </h1>
