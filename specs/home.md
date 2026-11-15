@@ -26,8 +26,11 @@ La sección principal está implementada por el componente compartido `HeroSecti
 
 ## UI/UX
 
-- Hero con gradiente o imagen de fondo de gran tamaño.
-- Diseño responsivo: hero adaptado a móvil (texto más pequeño, imagen recortada).
+- El Hero usa un gradiente teal con acentos cálidos y la imagen local `public/images/home/image-background-1.jpeg` en un panel lateral.
+- La imagen se muestra solo en escritorio (`lg` en adelante), centrada y sin deformación (`object-contain`), sobre un fondo blanco. La imagen y sus capas de color tienen opacidad del 75%.
+- En escritorio, el texto se presenta en una columna a la izquierda y la imagen a la derecha. Ambas comienzan a la misma altura; el ancho de la columna y su padding deben mantener una separación para que el texto no se superponga con la imagen.
+- El tamaño del título se reduce en escritorio para que el contenido permanezca dentro del área del Hero.
+- En móvil y tablet se conserva el diseño centrado existente y se oculta el panel de imagen.
 - Colores coherentes con la marca Wanderlust (tonos azul profundo, blanco, toques cálidos).
 - Botón CTA con hover effect.
 

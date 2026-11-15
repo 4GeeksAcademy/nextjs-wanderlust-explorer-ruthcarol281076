@@ -19,6 +19,7 @@ Encontrar actividades relevantes para un viaje puede requerir revisar muchas fue
 - Guardar y quitar experiencias de favoritos, y consultar la página de favoritos.
 - Consultar un perfil simulado con el recuento de favoritos.
 - Mostrar estados de carga con skeletons, páginas 404 y metadatos por ruta.
+- Presentar en el Hero de la Home una imagen local en escritorio, integrada con el gradiente teal; en móvil se conserva el diseño centrado sin el panel de imagen.
 - Usar el botón flotante compartido **Back to Top** en el explorador y favoritos: siempre visible, fijo al viewport y con scroll suave.
 - Navegar por la interfaz en español.
 
@@ -34,7 +35,7 @@ Encontrar actividades relevantes para un viaje puede requerir revisar muchas fue
 | Geist / Geist Mono (`next/font`) | Tipografía de la interfaz. |
 | ESLint | Análisis estático y linting. |
 
-El catálogo está definido localmente en `src/data/experiences.ts`; no requiere API ni base de datos externa. Las imágenes de las experiencias usan URLs de `placehold.co`.
+El catálogo está definido localmente en `src/data/experiences.ts`; no requiere API ni base de datos externa. El Hero utiliza la imagen local `public/images/home/image-background-1.jpeg`; las imágenes de las experiencias se gestionan desde sus `imageUrl` locales.
 
 ## Requisitos previos
 
