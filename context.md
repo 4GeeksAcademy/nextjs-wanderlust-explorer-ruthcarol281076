@@ -44,6 +44,7 @@ Las interfaces de carga y no encontrado son parte de las rutas: `SkeletonCard` p
   `/experiences?search=vela&category=adventure&destination=Croatia`
 - Al cargar una URL con query parameters, prerrellenar los controles correspondientes y aplicar los filtros.
 - Actualizar los parámetros al cambiar los controles sin recargar la página.
+- Los controles de categoría y destino responden con estado local inmediato. El destino aplica debounce de 250 ms antes de sincronizarse con la URL; búsqueda y filtros usan `router.replace` para evitar acumular entradas del historial al editar.
 - Si no hay coincidencias, mostrar: **“No se encontraron resultados”**.
 
 ### 4.3 Favoritos

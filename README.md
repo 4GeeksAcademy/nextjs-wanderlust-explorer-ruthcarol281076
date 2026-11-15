@@ -16,6 +16,7 @@ Encontrar actividades relevantes para un viaje puede requerir revisar muchas fue
 
 - Explorar un catálogo de experiencias y abrir la página de detalle de cada una.
 - Buscar experiencias y filtrar el catálogo; los criterios de navegación se reflejan en la URL.
+- Usar filtros con respuesta local inmediata y sincronización optimizada de la URL, evitando navegar en cada tecla o acumular historial durante la edición.
 - Guardar y quitar experiencias de favoritos, y consultar la página de favoritos.
 - Consultar un perfil simulado con el recuento de favoritos.
 - Mostrar estados de carga con skeletons, páginas 404 y metadatos por ruta.

@@ -29,7 +29,10 @@ Página principal de exploración donde los usuarios pueden buscar experiencias 
 ### URL y estado
 - Los filtros activos y el término de búsqueda deben reflejarse en la URL como query params:
   `/experiences?search=vela&category=adventure&destination=Croatia`
-- Usar `useSearchParams` para leer y `useRouter` (con `router.push`) para actualizar la URL.
+- Usar `useSearchParams` para leer y `useRouter` con `router.replace` para sincronizar la URL sin acumular entradas de historial durante los ajustes.
+- La selección de categoría debe reflejarse de inmediato mediante estado local y sincronizarse con la URL.
+- El input de destino debe responder de inmediato con estado local y aplicar el filtro/sincronizar la URL después de un debounce de 250 ms.
+- La búsqueda mantiene un debounce de 300 ms y evita navegar si la URL ya contiene el valor actual.
 - Al cargar la página con query params existentes, los inputs deben prerrellenarse y los resultados ya deben estar filtrados.
 - Los filtros deben funcionar de forma independiente y combinarse correctamente entre sí y con la búsqueda.
 
@@ -59,7 +62,7 @@ Página principal de exploración donde los usuarios pueden buscar experiencias 
 | Componente / API | Función |
 |---|---|
 | `useSearchParams` | Leer query params (`search`, `category`, `destination`) desde la URL |
-| `useRouter` | Actualizar la URL con `router.push()` cuando cambien los filtros o la búsqueda |
+| `useRouter` | Actualizar la URL con `router.replace()` cuando cambien los filtros o la búsqueda |
 | `usePathname` | Obtener la ruta base para construir la URL con query params |
 | `Link` | Navegación cliente a la página de detalle de cada experiencia |
 | `Suspense` | Envolver componentes que usen `useSearchParams` para evitar errores de hidratación |
@@ -90,7 +93,7 @@ Página principal de exploración donde los usuarios pueden buscar experiencias 
 | **Animaciones** | CSS `@keyframes` (fade-in, stagger) + Tailwind `animate-*` |
 | **Dataset** | Local (`src/data/experiences.ts`), filtrado con `useMemo` |
 | **Búsqueda** | Regex case-insensitive con escape de caracteres especiales; debounce 300ms en SearchBar |
-| **URL** | Query parameters compartibles (`?search=&category=&destination=`) |
+| **URL** | Query parameters compartibles (`?search=&category=&destination=`), sincronizados con `router.replace` |
 | **Condiciones** | Sin persistencia de datos, sin API externa, sin autenticación, sin base de datos |
 
 ## Criterios de aceptación
@@ -98,6 +101,7 @@ Página principal de exploración donde los usuarios pueden buscar experiencias 
 - [ ] La búsqueda filtra resultados por título usando una coincidencia con regex case-insensitive.
 - [ ] Los filtros de categoría y destino funcionan de forma independiente y se combinan correctamente con la búsqueda.
 - [ ] Los filtros activos y el término de búsqueda se reflejan en la URL como query params.
+- [ ] El campo de destino y la selección de categoría responden inmediatamente sin esperar la navegación; el destino se sincroniza con debounce y los cambios reemplazan la URL sin acumular entradas de historial.
 - [ ] Al cargar la página con query params existentes, los inputs están prerrellenados y los resultados ya están filtrados.
 - [ ] Si no hay coincidencias, se muestra "No se encontraron resultados".
 - [ ] El grid de tarjetas es responsivo (1 col móvil, 2 tablet, 3-4 escritorio).

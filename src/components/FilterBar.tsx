@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { useCallback, useMemo } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const CATEGORIES = [
   "All",
@@ -19,6 +19,16 @@ export default function FilterBar() {
 
   const currentCategory = searchParams.get("category") || "";
   const currentDestination = searchParams.get("destination") || "";
+  const [categoryValue, setCategoryValue] = useState(currentCategory);
+  const [destinationValue, setDestinationValue] = useState(currentDestination);
+
+  useEffect(() => {
+    setCategoryValue(currentCategory);
+  }, [currentCategory]);
+
+  useEffect(() => {
+    setDestinationValue(currentDestination);
+  }, [currentDestination]);
 
   const updateParam = useCallback(
     (key: string, value: string) => {
@@ -28,23 +38,50 @@ export default function FilterBar() {
       } else {
         params.delete(key);
       }
-      router.push(`${pathname}?${params.toString()}`, { scroll: false });
+      const query = params.toString();
+      router.replace(query ? `${pathname}?${query}` : pathname, {
+        scroll: false,
+      });
     },
     [router, pathname, searchParams]
   );
 
-  const handleDestinationChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      updateParam("destination", e.target.value);
+  const handleCategoryChange = useCallback(
+    (category: string) => {
+      setCategoryValue(category);
+      updateParam("category", category);
     },
     [updateParam]
   );
 
-  const destinationValue = useMemo(
-    () => currentDestination,
-    [currentDestination]
+  const handleDestinationChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setDestinationValue(e.target.value);
+    },
+    []
   );
-  const categoryValue = useMemo(() => currentCategory, [currentCategory]);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      const params = new URLSearchParams(searchParams.toString());
+      const value = destinationValue.trim();
+
+      if (value) {
+        params.set("destination", value);
+      } else {
+        params.delete("destination");
+      }
+
+      if (params.get("destination") === currentDestination) return;
+
+      const query = params.toString();
+      router.replace(query ? `${pathname}?${query}` : pathname, {
+        scroll: false,
+      });
+    }, 250);
+
+    return () => window.clearTimeout(timer);
+  }, [destinationValue, currentDestination, pathname, router, searchParams]);
 
   return (
     <div className="flex flex-col sm:flex-row gap-3 sm:items-end" role="search" aria-label="Filtros de búsqueda">
@@ -56,9 +93,7 @@ export default function FilterBar() {
         <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Filtrar por categoría">
           {CATEGORIES.map((cat) => {
             const isActive =
-              cat === "All"
-                ? !currentCategory
-                : currentCategory.toLowerCase() === cat.toLowerCase();
+              cat === "All" ? !categoryValue : categoryValue.toLowerCase() === cat.toLowerCase();
             return (
               <button
                 key={cat}
@@ -66,7 +101,7 @@ export default function FilterBar() {
                 role="radio"
                 aria-checked={isActive}
                 onClick={() =>
-                  updateParam("category", cat === "All" ? "" : cat.toLowerCase())
+                  handleCategoryChange(cat === "All" ? "" : cat.toLowerCase())
                 }
                 className={`px-3.5 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 border ${
                   isActive

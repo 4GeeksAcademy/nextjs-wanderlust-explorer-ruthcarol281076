@@ -25,7 +25,15 @@ export default function SearchBar() {
       } else {
         params.delete("search");
       }
-      router.push(`${pathname}?${params.toString()}`, { scroll: false });
+      const query = params.toString();
+      const nextUrl = query ? `${pathname}?${query}` : pathname;
+      const currentUrl = searchParams.toString()
+        ? `${pathname}?${searchParams.toString()}`
+        : pathname;
+
+      if (nextUrl !== currentUrl) {
+        router.replace(nextUrl, { scroll: false });
+      }
     },
     [router, pathname, searchParams]
   );
